@@ -5,11 +5,12 @@ import PackageDescription
 
 let package = Package(
     name: "Loggable",
-	platforms: [.iOS(.v16)],
+	platforms: [.iOS(.v16), .macOS(.v11)],
 	products: [
 		.library(name: "Loggable", targets: ["Loggable"])
 	],
 	targets: [
 		.target(name: "Loggable"),
+		.testTarget(name: "LoggableTests", dependencies: ["Loggable"]),
 	]
 )
